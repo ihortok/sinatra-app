@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sinatra_app_db
+  pool: 5
+  username: postgres
+  password: postgres
