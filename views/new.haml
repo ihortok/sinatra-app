@@ -1,0 +1,10 @@
+%form{ action: '/books', method: :post}
+  %fieldset
+    %ul
+      %li
+        %label{for: 'book[name]'} Name:
+        %input{type: :text, name: 'book[name]', class: :text}
+      %li
+        %label{for: 'book[price]'} Price:
+        %input{type: :number, name: 'book[price]', class: :text}
+    %input{type: :submit, value: :Send, class: :button}
