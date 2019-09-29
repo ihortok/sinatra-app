@@ -5,14 +5,15 @@ require 'haml'
 
 current_dir = Dir.pwd
 Dir["#{current_dir}/models/*.rb"].each { |file| require file }
+set :public_folder, 'public'
 
-get '/' do
+get '/books' do
   @books = Book.all
-  haml :index
+  haml :'books/index'
 end
 
 get '/books/new' do
-  haml :new
+  haml :'books/new'
 end
 
 post '/books' do
