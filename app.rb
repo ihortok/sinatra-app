@@ -44,3 +44,8 @@ delete '/books/:id' do
   @book.destroy
   redirect '/books'
 end
+
+get '/authors' do
+  @authors = Author.all
+  haml :'authors/index'
+end

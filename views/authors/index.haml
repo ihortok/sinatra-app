@@ -1,0 +1,9 @@
+%div.container
+  %div.row
+    %div.col-12.with_margins
+      - @authors.each do |author|
+        %h2 #{author.first_name} #{author.last_name}
+        %ul
+          %li Country: #{author.country}
+          %li Age: #{author.age}
+          %li #{author.description}

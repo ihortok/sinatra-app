@@ -3,7 +3,7 @@
     %a{href: '/books/new', class: 'btn btn-primary'} New book
   %div.row
     - @books.each do |book|
-      %div.col-12.col-sm-6.col-md-3
+      %div.col-12.col-sm-6.col-md-3.with_margins
         %p
           %img(src="#{book.img_url}")
         %h4 #{book.name}
