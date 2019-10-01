@@ -1,0 +1,13 @@
+%div.container
+  %div.row.with_margins
+    %a{href: '/books/new', class: 'btn btn-primary'} New book
+  %div.row
+    - @books.each do |book|
+      %div.col-12.col-sm-6.col-md-3.with_margins
+        %p
+          %img(src="#{book.img_url}")
+        %h4 #{book.name}
+        %h5 #{book.author.first_name} #{book.author.last_name}
+        %p #{book.price}
+        %p #{book.description}
+        %a{href: "/books/#{book.id}", class: 'btn btn-success'} Show

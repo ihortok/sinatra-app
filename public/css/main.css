@@ -1,0 +1,19 @@
+img {
+  max-width: 100%
+}
+
+.navbar-nav {
+  flex-direction: row
+}
+
+.nav-item {
+  margin-right: 10px
+}
+
+.with_margins {
+  margin: 10px 0
+}
+
+.with_margin_right {
+  margin-right: 10px;
+}

@@ -1,0 +1,17 @@
+%div.container
+  %div.row.with_margins
+    %a{href: '/books', class: 'btn btn-primary with_margin_right'} All books
+    %a{href: "/books/#{@book.id}/edit", class: 'btn btn-warning'} Edit
+  %div.row
+    %div.col-12.col-sm-4
+      %p
+        %img(src="#{@book.img_url}")
+    %div.col-12.col-sm-8
+      %h2 #{@book.name}
+      %h4 #{@book.author.first_name} #{@book.author.last_name}
+      %p #{@book.price}
+      %p #{@book.description}
+
+      %form{ action: "/books/#{ @book.id }", method: :post}
+        %input{type: :hidden, name: '_method', value: :delete}
+        %input{type: :submit, value: :delete, class: 'btn btn-danger'}
