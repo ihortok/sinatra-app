@@ -1,5 +1,7 @@
 %div.container
   %div.row
+    %a{href: '/books/new'} New book
+  %div.row
     - @books.each do |book|
       %div.col-12.col-sm-6.col-md-4
         %p #{book.img_url}
@@ -7,3 +9,4 @@
         -# %h3 "#{Author.books.find(book.id).first_name}"
         %p #{book.price}
         %p #{book.description}
+        %a{href: "/books/#{book.id}"} Show

@@ -1,0 +1,10 @@
+%a{href: '/books'} All books
+%p #{@book.img_url}
+%h2 #{@book.name}
+-# %h3 "#{Author.books.find(book.id).first_name}"
+%p #{@book.price}
+%p #{@book.description}
+
+%form{ action: "/books/#{ @book.id }", method: :post}
+  %input{type: :hidden, name: '_method', value: :delete}
+  %input{type: :submit, value: :delete}
