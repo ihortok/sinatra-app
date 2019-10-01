@@ -10,6 +10,14 @@ GIT
       rack-protection (= 2.0.7)
       tilt (~> 2.0)
 
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 7cd6baa41c074fd0c54cd1e43d6f34f551b0d221
+  branch: master
+  specs:
+    faker (2.5.0)
+      i18n (~> 1.6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -50,6 +58,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  faker!
   haml
   pg
   rake
