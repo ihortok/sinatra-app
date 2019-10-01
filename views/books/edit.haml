@@ -1,22 +1,24 @@
-%form{ action: "/books/#{ @book.id }", method: :post}
-  %fieldset
-    %ul
-      %li
-        %label{for: 'book[name]'} Name:
-        %input{type: :text, name: 'book[name]', value: @book.name}
-      %li
-        %label{for: 'book[price]'} Price:
-        %input{type: :number, name: 'book[price]', value: @book.price}
-      %li
-        %label{for: 'book[img_url]'} Image link:
-        %input{type: :text, name: 'book[img_url]', value: @book.img_url}
-      %li
-        %label{for: 'book[description]'} Description:
-        %input{type: :text, name: 'book[description]', value: @book.description}
-      %li
-        %label{for: 'book[author_id]'} Author:
-        %select{name: 'book[author_id]'}
-          - Author.all.each do |author|
-            %option{value: author.id} #{author.first_name} #{author.last_name}
-    %input{type: :hidden, name: '_method', value: :patch}
-    %input{type: :submit, value: :send}
+%div.container
+  %div.row.with_margins
+    %a{href: '/books', class: 'btn btn-primary'} All books
+  %div.row
+    %div.col-12.col-sm-5
+      %form{ action: '/books', method: :post}
+        %div.form-group
+          %label{for: 'book[name]'} Name:
+          %input{type: :text, name: 'book[name]', class: 'form-control', value: @book.name}
+        %div.form-group
+          %label{for: 'book[price]'} Price:
+          %input{type: :number, name: 'book[price]', class: 'form-control', value: @book.price}
+        %div.form-group
+          %label{for: 'book[img_url]'} Image link:
+          %input{type: :text, name: 'book[img_url]', class: 'form-control', value: @book.img_url}
+        %div.form-group
+          %label{for: 'book[description]'} Description:
+          %input{type: :text, name: 'book[description]', class: 'form-control', value: @book.description}
+        %div.form-group
+          %label{for: 'book[author_id]'} Author:
+          %select{name: 'book[author_id]', class: 'form-control'}
+            - Author.all.each do |author|
+              %option{value: author.id} #{author.first_name} #{author.last_name}
+        %input{type: :submit, value: :Save, class: 'btn btn-success'}
