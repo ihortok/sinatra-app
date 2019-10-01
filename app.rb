@@ -8,6 +8,10 @@ current_dir = Dir.pwd
 Dir["#{current_dir}/models/*.rb"].each { |file| require file }
 set :public_folder, 'public'
 
+get '/' do
+  haml :welcome
+end
+
 get '/books' do
   @books = Book.all
   haml :'books/index'
