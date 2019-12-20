@@ -41,7 +41,7 @@ GEM
     minitest (5.12.1)
     mustermann (1.0.3)
     pg (1.1.4)
-    rack (2.0.7)
+    rack (2.0.8)
     rake (12.3.3)
     sinatra-activerecord (2.0.14)
       activerecord (>= 3.2)
