@@ -1,57 +1,56 @@
 GIT
-  remote: git://github.com/sinatra/sinatra.git
-  revision: 6ee7fc1a42e0e930eb603b9a4b67a4ff7406bfe0
-  specs:
-    rack-protection (2.0.7)
-      rack
-    sinatra (2.0.7)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.7)
-      tilt (~> 2.0)
-
-GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 7cd6baa41c074fd0c54cd1e43d6f34f551b0d221
+  revision: acebadd87a4d7fadc7726e315def5bb518915a82
   branch: master
   specs:
-    faker (2.5.0)
-      i18n (~> 1.6.0)
+    faker (2.11.0)
+      i18n (>= 1.6, < 2)
+
+GIT
+  remote: https://github.com/sinatra/sinatra.git
+  revision: 91477e6dad7c9d8eb1c358e47b9d83b73d626f84
+  specs:
+    rack-protection (2.1.0)
+      rack
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
 
 GEM
-  remote: https://rubygems.org/
   specs:
-    activemodel (6.0.0)
-      activesupport (= 6.0.0)
-    activerecord (6.0.0)
-      activemodel (= 6.0.0)
-      activesupport (= 6.0.0)
-    activesupport (6.0.0)
+    activemodel (6.0.3)
+      activesupport (= 6.0.3)
+    activerecord (6.0.3)
+      activemodel (= 6.0.3)
+      activesupport (= 6.0.3)
+    activesupport (6.0.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 2.1, >= 2.1.8)
-    concurrent-ruby (1.1.5)
-    haml (5.1.2)
-      temple (>= 0.8.0)
+      zeitwerk (~> 2.2, >= 2.2.2)
+    concurrent-ruby (1.1.6)
+    haml (4.0.7)
       tilt
-    i18n (1.6.0)
+    i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    minitest (5.12.1)
-    mustermann (1.0.3)
-    pg (1.1.4)
-    rack (2.0.7)
-    rake (12.3.3)
-    sinatra-activerecord (2.0.14)
-      activerecord (>= 3.2)
+    minitest (5.14.1)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    pg (1.2.3)
+    rack (2.2.2)
+    rake (13.0.1)
+    ruby2_keywords (0.0.2)
+    sinatra-activerecord (2.0.18)
+      activerecord (>= 4.1)
       sinatra (>= 1.0)
-    temple (0.8.2)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tzinfo (1.2.5)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    zeitwerk (2.1.10)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
@@ -59,14 +58,14 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   faker!
-  haml
+  haml (~> 4.0, >= 4.0.7)
   pg
   rake
   sinatra!
   sinatra-activerecord
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.7.1p83
 
 BUNDLED WITH
-   1.17.2
+   2.1.4
